@@ -20,3 +20,22 @@ for (let i=1;i<arr.length;i++){
     }
 }
 console.log("Largest number is:",largest);
+
+//Factorial
+let number = 5;
+let Factorial = 1;
+for (let i=1;i<=number;i++)
+{
+    Factorial *=i;
+}
+console.log("Factorial:",Factorial);
+
+//Palindrome
+let str = "madam";
+let reversed = str.split("").reverse().join("");
+if (str === reversed )
+{
+    console.log("Palindrome");
+}else{
+    console.log("Not Palindrome");
+}
