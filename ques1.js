@@ -1,9 +1,10 @@
 //Odd or Even
-let num = 10;
-if (num % 2 === 0){
-    console.log(num + "is Even");
+let num=10;
+if (num%2 === 0)
+{
+ console.log(num + "is Even");
 }else{
-    console.log(num + "is Odd");
+ console.log(num + "is Odd");
 }
 
 //Reverse String
@@ -39,3 +40,13 @@ if (str === reversed )
 }else{
     console.log("Not Palindrome");
 }
+
+//Vowels
+let str = "Thaslima Banu";
+let count=0;
+for (let i=0;i<str.length;i++){
+    let char=str[i].toLowerCase();
+if (char === "a"|| char === "e"|| char === "i" || char === "o"|| char === "u")
+    count++;
+}
+console.log("Vowel count is:",count);
