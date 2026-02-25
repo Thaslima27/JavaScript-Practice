@@ -20,3 +20,12 @@ Object.freeze(user);//it freeze the user
 user.age=24;//won't modify
 delete user.name;//won't delete
 console.log(user);
+
+//deep copy
+let person={name:"Aathil",age:14,address:{city:"Vdm"}};
+function deepcopy(obj);
+return JSON.parse(JSON.stringify(obj));
+let copiedperson=deepcopy(person);
+copiedperson.address.city="chennai";
+console.log("Original:",person);
+console.log("Copied:",copiedperson)
