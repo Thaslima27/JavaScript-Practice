@@ -29,3 +29,11 @@ function sayBye() {
 console.log("Have a nice day!");
 }
 greet("Aishu", sayBye);
+
+//return another fn
+const outer=()=>{
+return ()=>{
+console.log("Hello developer");
+};
+};
+outer()();
