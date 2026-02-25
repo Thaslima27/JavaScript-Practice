@@ -23,8 +23,8 @@ console.log(user);
 
 //deep copy
 let person={name:"Aathil",age:14,address:{city:"Vdm"}};
-function deepcopy(obj);
-return JSON.parse(JSON.stringify(obj));
+function deepcopy(obj){
+return JSON.parse(JSON.stringify(obj));}
 let copiedperson=deepcopy(person);
 copiedperson.address.city="chennai";
 console.log("Original:",person);
