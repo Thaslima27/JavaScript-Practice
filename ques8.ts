@@ -37,3 +37,13 @@ return `Hello ${name}`;
 }
 console.log(greet("Zara"));
 console.log(greet("Zara", 22));
+
+//generic fn
+function identity<T>(value:T):T
+{
+return value;
+}
+let num = identity<number>(100);
+let text = identity<string>("Hello");
+console.log(num);
+console.log(text);
