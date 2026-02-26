@@ -83,3 +83,86 @@ const person:{name:String,age:number}={
 console.log(person);
 person.age = 21;
 console.log(person);
+
+//QUES3 
+//user and update property
+let users:{name:string,age:number,isStudent:boolean}={
+    name:"sana",
+    age:21,
+    isStudent:true
+};
+users.age=23;
+console.log(users);
+
+//clone
+let user1:{name:string,age:number,city:string}={
+    name:"banu",age:21,city:"virudhachalam"};
+let user2={...user1};
+user2.age=24;
+console.log("Original:",user1);
+console.log("Cloned:",user2);
+
+//objectfreeze()
+let user:{name:string,age:number}={name:"thasli",age:21};
+Object.freeze(user);//it freeze the user
+user.age=24;//won't modify
+delete user.name;//won't delete
+console.log(user);
+
+//deepcopy
+interface Address {
+  city: string;
+}
+interface Person {
+  name: string;
+  age: number;
+  address: Address;
+}
+let person: Person = {
+  name: "Aathil",
+  age: 14,
+  address: { city: "Vdm" }
+};
+function deepCopy<T>(obj: T): T {
+  return JSON.parse(JSON.stringify(obj));
+}
+let copiedPerson: Person = deepCopy(person);
+copiedPerson.address.city = "Chennai";
+console.log("Original:", person);
+console.log("Copied:", copiedPerson);
+
+//QUES4
+function greet(name:string):string{
+    return "Hello "+name;
+}
+console.log(greet("Thaslima"));
+
+//arrow function 
+const greet=(name:string):string=>{
+    return "Hello "+name;
+}
+console.log(greet("Thaslima"));
+
+//add two numbers
+const add=(a:number,b:number):number=>
+{
+return a+b;
+};
+console.log(add(9,3));
+
+//callback
+function greet(name:string,callback:()=>void):void{
+console.log("Hi " +name);
+callback();
+}
+function sayBye():void{
+console.log("Have a nice day!");
+}
+greet("Aishu", sayBye);
+
+// return another function
+const outer=():()=>void=>{
+return():void=>{
+console.log("Hello developer");};
+};
+outer()();
