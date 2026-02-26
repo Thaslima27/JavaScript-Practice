@@ -1,3 +1,4 @@
+//QUES1 
 let num:number=10;
 if (num%2 === 0)
 {
@@ -48,4 +49,37 @@ for (let i:number=0;i<str.length;i++){
 if (char === "a"|| char === "e"|| char === "i" || char === "o"|| char === "u")
     count++;
 }
-console.log("Vowel count is:",count);
+console.log("Vowel count is:",count);   
+
+
+//QUES 2 difference
+function Example():void {
+if (true){
+    var a:number= 10;
+    let b:number = 20;
+    const c:number = 30;
+console.log("Inside block:");
+console.log(a);
+console.log(b);
+console.log(c);
+}
+console.log("Outside block:");
+console.log(a);
+}
+Example();
+
+//let 
+{
+let message:string = "hello buddy";
+console.log(message);
+}
+console.log(message);//won't work bcz no msg in outside block
+
+//const
+const person:{name:String,age:number}={
+    name:"thasli",
+    age:20
+};
+console.log(person);
+person.age = 21;
+console.log(person);
