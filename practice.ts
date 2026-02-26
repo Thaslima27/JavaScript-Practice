@@ -166,3 +166,33 @@ return():void=>{
 console.log("Hello developer");};
 };
 outer()();
+
+//QUES5
+//map() double 
+let number:number[]=[1,2,3,4,5];
+let doubled:number[]=number.map(number => number*2);
+console.log(doubled);
+
+
+// filter() even numbers
+let numbers: number[] = [1,2,3,4,5,6,7,8];
+let evenNumbers: number[] = numbers.filter((num: number): boolean => num % 2 === 0);
+console.log(evenNumbers);
+
+//age> 18
+let users: { name: string; age: number }[] = [
+  { name: "Thaslima", age: 21 },
+  { name: "Vasima", age: 19 },
+  { name: "Aathil", age: 15 }];
+let adults = users.filter(user => user.age > 18);
+console.log(adults);
+
+//reduce() cal & tot sum
+let numbers:number[]=[10,30,49,72];
+let total=numbers.reduce((sum:number,num:number)=>sum+num,0);
+console.log(total);
+
+//Uppercase Using map()
+let names:string[]=["thaslima","sana","azlin"];
+let upperNames:string[]=names.map((name:string):string =>name.toUpperCase());
+console.log(upperNames);
